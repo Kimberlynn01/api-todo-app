@@ -21,3 +21,5 @@ app.get("/", async (req, res) => {
     res.status(500).json({ error: "terjadi kesalahan saat ingin memuat data" });
   }
 });
+
+module.exports = app;

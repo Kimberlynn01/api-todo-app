@@ -25,6 +25,8 @@ const Middleware = (req, res, next) => {
 app.use("/api/v1", Middleware);
 app.use("/api/v1", route);
 
-app.listen(3000, () => {
-  console.log("server running on port 3000");
+app.use((req, res) => {
+  res.status(404).json({ error: "Endpoint not found 404" });
 });
+
+module.exports = app;
